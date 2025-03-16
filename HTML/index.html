@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hangman</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+        </style>
+    </head>
+
+    <body>  
+        
+        <main>
+            <section id="game1">
+                <div id="guesses" class="space-grotesk-hangman">
+                    <h4 id="alr">Already Guessed:</h2>
+                    <p id="gue"></p>
+                </div>
+                <div id="gallows">
+                    <p>
+                _______
+                |      |
+                       |      
+                       |
+                       |     
+                       |
+                       |
+                       |
+                       |
+                       |
+                    _______
+                 </p>
+                </div>
+            </section>
+           
+            <section id="game2" class="underscore">
+                <button id="start" class="press-start-2p-regular">START</button>
+            </section>
+
+            <div id="category"></div>
+
+            <section id="keyboard">
+                <div class="keyboard-row">
+                    <button class="key space-grotesk-hangman">Q</button>
+                    <button class="key space-grotesk-hangman">W</button>
+                    <button class="key space-grotesk-hangman">E</button>
+                    <button class="key space-grotesk-hangman">R</button>
+                    <button class="key space-grotesk-hangman">T</button>
+                    <button class="key space-grotesk-hangman">Y</button>
+                    <button class="key space-grotesk-hangman">U</button>
+                    <button class="key space-grotesk-hangman">I</button>
+                    <button class="key space-grotesk-hangman">O</button>
+                    <button class="key space-grotesk-hangman">P</button>
+                </div>
+                <div class="keyboard-row">
+                    <button class="key space-grotesk-hangman">A</button>
+                    <button class="key space-grotesk-hangman">S</button>
+                    <button class="key space-grotesk-hangman">D</button>
+                    <button class="key space-grotesk-hangman">F</button>
+                    <button class="key space-grotesk-hangman">G</button>
+                    <button class="key space-grotesk-hangman">H</button>
+                    <button class="key space-grotesk-hangman">J</button>
+                    <button class="key space-grotesk-hangman">K</button>
+                    <button class="key space-grotesk-hangman">L</button>
+                </div>
+                <div class="keyboard-row">
+                    <button class="key space-grotesk-hangman">Z</button>
+                    <button class="key space-grotesk-hangman">X</button>
+                    <button class="key space-grotesk-hangman">C</button>
+                    <button class="key space-grotesk-hangman">V</button>
+                    <button class="key space-grotesk-hangman">B</button>
+                    <button class="key space-grotesk-hangman">N</button>
+                    <button class="key space-grotesk-hangman">M</button>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+
+    </body>
+</html>

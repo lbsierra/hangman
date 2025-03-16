@@ -1,0 +1,106 @@
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.space-grotesk-hangman {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }  
+
+body {
+    background-color: #000;
+    color: rgb(26, 255, 128);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#gallows {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    white-space: pre;
+}
+
+#game1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#guesses {
+  background-color: rgb(26, 255, 128);
+  border-style: double;
+  border-color: rgb(26, 255, 128);
+}
+
+
+#game2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  background-color: #000;
+  color: rgb(26, 255, 128);
+  width: 60px;
+  height: 50px;
+  font-size: 25px;
+  margin: 5px;
+}
+
+#start {
+  background-color: #000;
+  color: rgb(26, 255, 128);
+  border-color: rgb(26, 255, 128);
+  padding: 7.5px;
+  font-size: 25px;
+  border-style: double;
+  border-width: 3px;
+}
+
+#alr {
+  color: #000;
+  margin-top: 0px;
+}
+
+#gue {
+  color: #000;
+}
+
+.underscore {
+  font-size: 50px;
+}
+
+#category {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.key:disabled {
+  background-color: #ccc;
+  color: #000;
+}
