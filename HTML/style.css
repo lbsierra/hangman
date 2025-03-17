@@ -1,3 +1,7 @@
+* {
+  cursor: url("./images/left_ptr.png"), auto;
+}
+
 .press-start-2p-regular {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
@@ -32,9 +36,10 @@ main {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.2rem;
+    text-align: left;
     white-space: pre;
     padding: 10px;
-    margin-top: 15px;
 }
 
 #game1 {
@@ -46,17 +51,28 @@ main {
 }
 
 #guesses {
-  background-color: rgb(26, 255, 128);
-  border-style: double;
-  border-color: rgb(26, 255, 128);
+  font-size: 1rem;
+  margin-top: 10px;
+  color: rgb(26, 255, 128);
+  padding: 10px;
+  border: 2px solid rgb(26, 255, 128);
+  background-color: #000;
+  border-radius: 5px;
+  width: 300px;
+  height: 100px;
+  
 }
 
+#ag {
+  width: 80%;
+  text-wrap: wrap;
+}
 
 #game2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 30px; 
 }
 
 #keyboard {
@@ -72,7 +88,11 @@ main {
   width: 60px;
   height: 50px;
   font-size: 25px;
+  padding: 10px;
   margin: 5px;
+  border-radius: 3px;
+  cursor: url("./images/pointer.png"), auto;
+  transition: background-color 0.4s ease;
 }
 
 #start {
@@ -84,30 +104,26 @@ main {
   border-style: double;
   border-width: 3px;
   margin-top: 200px;
+  cursor: url("./images/pointer.png"), auto;
 }
 
-#alr {
-  color: #000;
-  margin-top: 0px;
-}
-
-#gue {
-  color: #000;
-}
 
 .underscore {
   font-size: 50px;
 }
 
 #category {
+  font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: bold;
+  padding: 5px;
+  display: inline-block;
 }
 
 .key:disabled {
-  background-color: #ccc;
-  color: #000;
+  background-color: #555;
+  color: #aaa;
 }
 
 section, #category, #guesses, #gallows {
@@ -126,6 +142,31 @@ section, #category, #guesses, #gallows {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+#message {
+  background-color: #000;
+  color: rgb(26, 255, 128);
+  text-align: center;
+  margin-top: 20px;
+}
+
+#restart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#restartButton {
+  background-color: #000;
+  color: rgb(26, 255, 128);
+  border-color: rgb(26, 255, 128);
+  padding: 7.5px;
+  font-size: 25px;
+  border-style: double;
+  border-width: 3px;
+  cursor: url("./images/pointer.png"), auto;
 }
 
 .hidden {

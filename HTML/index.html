@@ -24,24 +24,10 @@
             <div id="game">
             <section id="game1">
                 <div id="guesses" class="space-grotesk-hangman">
-                    <h4 id="alr">Already Guessed:</h2>
-                    <p id="gue"></p>
+                    <h4 id="alr">Already Guessed:</h4>
+                    <h4 id="ag"></h4>
                 </div>
-                <div id="gallows">
-                    <p>
-                _______
-                |      |
-                       |      
-                       |
-                       |     
-                       |
-                       |
-                       |
-                       |
-                       |
-                    _______
-                 </p>
-                </div>
+                <div id="gallows"></div>
             </section>
            </div>
            </div>
@@ -86,7 +72,13 @@
                     <button class="key space-grotesk-hangman">M</button>
                 </div>
             </section>
-         </div>   
+         </div> 
+         <section id="gameOver" class="hidden">
+            <div id="message" class="space-grotesk-hangman"></div>
+            <div id="restart">
+                <button id="restartButton" class="press-start-2p-regular">Play Again</button>
+            </div>  
+        </section>
         </main>
         <script src="script.js"></script>
 

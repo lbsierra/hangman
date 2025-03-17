@@ -16,8 +16,8 @@ const words = [
 ];
 
 const gallowsStages = [
-`_______
-|      |
+` ______
+ |     |
        |      
        |
        |     
@@ -25,31 +25,29 @@ const gallowsStages = [
        |
        |
        |
-       |
     _______`,
-`_______
-|      |
-@      |      
+` ______
+ |     |
+ @     |      
        |
        |     
        |
        |
        |
        |
-       |
     _______`,
-`_______
-|      |
-@      |      
-|      |     
-|      |
+` ______
+ |     |
+ @     |      
+ |     |     
+ |     |
        |
        |
        |
        | 
     _______`,
-`_______
-|      |
+` ______
+ |     |
  @     |      
 /|     |     
  |     |
@@ -58,9 +56,9 @@ const gallowsStages = [
        |
        | 
     _______`,
-`_______
-|      |
-@      |      
+` ______
+ |     |
+ @     |      
 /|\\    |     
  |     |
        |
@@ -68,19 +66,19 @@ const gallowsStages = [
        |
        | 
     _______`,
-`_______
-|      |
-@      |      
-/|\\    |     
+` ______
+ |     |
+ @     |      
+/|\\   |     
  |     |
 /      |
        |
        |
        | 
     _______`,
-`_______
-|      |
-@      |      
+` ______
+ |     |
+ @     |      
 /|\\    |     
  |     |
 / \\    |
@@ -92,6 +90,8 @@ const gallowsStages = [
 
 
 const startButton = document.getElementById("start");
+const restartButton = document.getElementById("restart");
+const gameMessage = document.getElementById("message");
 
 let currentWord;
 let currentCategory;
@@ -115,10 +115,17 @@ function startGame() {
     gameOver = false;
     wordDisplay = '_ '.repeat(currentWord.length).trim();
 
+    document.getElementById("game2").innerHTML = wordDisplay;
+    document.getElementById("category").innerHTML = `Category: ${currentCategory}`;
+    document.getElementById("gameOver").classList.add("hidden");
+    document.getElementById("ag").textContent = "";
+
     const keys = document.querySelectorAll(".key");
     keys.forEach(key => {
-        key.disabled = false;
-        key.addEventListener("click", function () {
+        const newKey = key.cloneNode(true); 
+        key.parentNode.replaceChild(newKey, key); 
+        newKey.disabled = false;
+        newKey.addEventListener("click", function () {
             const guessedLetter = this.textContent;
             checkGuess(guessedLetter, this);
         })
@@ -129,7 +136,7 @@ function checkGuess(guessedLetter, button) {
     if (gameOver) return;
 
     guessedLetters.push(guessedLetter);
-    document.getElementById("alr").textContent = `Already Guessed: ${guessedLetters.join(", ")}`;
+    document.getElementById("ag").textContent = `${guessedLetters.join(" ")}`;
 
     if (currentWord.includes(guessedLetter)) {
         let displayUpdate = "";
@@ -145,8 +152,11 @@ function checkGuess(guessedLetter, button) {
 
 
     if (!displayUpdate.includes("_")) {
-        alert("You win!");
+        gameMessage.textContent = "You win!";
         gameOver = true;
+        document.getElementById("category").classList.add("hidden");
+        document.getElementById("keyDiv").classList.add("hidden");
+        document.getElementById("gameOver").classList.remove("hidden");
     } 
 } else {
         wrongGuesses++;
@@ -154,8 +164,13 @@ function checkGuess(guessedLetter, button) {
 }
 
     if (wrongGuesses >= maxGuesses) {
-        alert("Game over. Try again!");
+        wordDisplay = currentWord.split("").join(" ");
+        gameMessage.textContent = "Game over!";
         gameOver = true;
+        document.getElementById("game2").innerHTML = wordDisplay;
+        document.getElementById("category").classList.add("hidden");
+        document.getElementById("keyDiv").classList.add("hidden");
+        document.getElementById("gameOver").classList.remove("hidden");
     }
 
     button.disabled = true;
@@ -168,5 +183,9 @@ startButton.addEventListener("click", function() {
     document.getElementById("category").innerHTML = `Category: ${currentCategory}`;
 
 }
+)
 
+restartButton.addEventListener("click", function() {
+    startGame();
+}
 )
