@@ -50,7 +50,7 @@ const gallowsStages = [
     _______`,
 `_______
 |      |
-@      |      
+ @     |      
 /|     |     
  |     |
        |
@@ -102,6 +102,8 @@ let wordDisplay = "";
 let gameOver = false;
 
 function startGame() {
+    document.getElementById("gameContainer").classList.remove("hidden");
+    document.getElementById("keyDiv").classList.remove("hidden");
     document.getElementById("gallows").textContent = gallowsStages[0];
     let currentObject = words[Math.floor(Math.random() * words.length)]; 
     currentWord = currentObject.word;
@@ -139,17 +141,17 @@ function checkGuess(guessedLetter, button) {
             }
     } 
         wordDisplay = displayUpdate.split("").join(" ");
-        document.getElementById("game2").innerHTML = displayUpdate;
+        document.getElementById("game2").innerHTML = wordDisplay;
 
 
     if (!displayUpdate.includes("_")) {
         alert("You win!");
         gameOver = true;
-    } else {
+    } 
+} else {
         wrongGuesses++;
         document.getElementById("gallows").textContent = gallowsStages[wrongGuesses];
-    }
-}   
+}
 
     if (wrongGuesses >= maxGuesses) {
         alert("Game over. Try again!");
@@ -161,7 +163,6 @@ function checkGuess(guessedLetter, button) {
 
 
 startButton.addEventListener("click", function() {
-   // console.log("clicked");
     startGame();
     document.getElementById("game2").innerHTML = wordDisplay;
     document.getElementById("category").innerHTML = `Category: ${currentCategory}`;

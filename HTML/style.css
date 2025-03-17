@@ -16,15 +16,16 @@ body {
     color: rgb(26, 255, 128);
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
 main {
   display: flex;
   flex-direction: column;
+}
+
+#headerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #gallows {
@@ -82,6 +83,7 @@ main {
   font-size: 25px;
   border-style: double;
   border-width: 3px;
+  margin-top: 200px;
 }
 
 #alr {
@@ -124,4 +126,8 @@ section, #category, #guesses, #gallows {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.hidden {
+  display: none;
 }
