@@ -32,6 +32,8 @@ main {
     font-weight: 400;
     font-style: normal;
     white-space: pre;
+    padding: 10px;
+    margin-top: 15px;
 }
 
 #game1 {
@@ -39,6 +41,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 200px;
 }
 
 #guesses {
@@ -103,4 +106,22 @@ main {
 .key:disabled {
   background-color: #ccc;
   color: #000;
+}
+
+section, #category, #guesses, #gallows {
+  margin-bottom: 20px;
+}
+
+#guesses p, #gallows p {
+  margin: 10px 0;
+}
+
+#game2 {
+  margin-top: 20px;
+}
+
+#game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
