@@ -1,7 +1,7 @@
 "use strict";
 
 const words = [
-    {
+   /* {
         word: "BEAGLE",
         category: "Pets"
     },
@@ -12,7 +12,75 @@ const words = [
     {
         word: "MARIO",
         category: "Video Games"
+    },
+    {
+        word: "ELEPHANT",
+        category: "Animals"
+    },
+    {
+        word: "FIREPLACE",
+        category: "Furniture"
+    },
+    {
+        word: "TIRAMISU",
+        category: "Dessert"
+    },
+    {
+        word: "WHIMSICAL",
+        category: "Adjectives"
+    },
+    {
+        word: "CELESTIAL",
+        category: "Adjectives"
+    },
+    {
+        word: "ENDEARING",
+        category: "Adjectives"
+    },
+    {
+        word: "JAZZ",
+        category: "Music"
+    },
+    {
+        word: "TWILIGHT",
+        category: "Weather"
+    },
+    {
+        word: "ELDRITCH",
+        category: "Miscellaneous"
+    },
+    {
+        word: "LAVENDER",
+        category: "Plants"
+    },
+    {
+        word: "AMETHYST",
+        category: "Gems"
+    },
+    {
+        word: "MEDIEVAL",
+        category: "History"
+    }, */
+    {
+        word: "STRAWBERRY",
+        category: "Plants"
+    },
+    {
+        word: "UNICORN",
+        category: "Creatures"
     }
+    /* {
+        word: "DRAGON",
+        category: "Creatures"
+    },
+    {
+        word: "SWORD",
+        category: "It's dangerous to go alone, take this"
+    },
+    {
+        word: "VOYAGER",
+        category: "Spacecraft"
+    },*/
 ];
 
 const gallowsStages = [

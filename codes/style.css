@@ -172,3 +172,96 @@ section, #category, #guesses, #gallows {
 .hidden {
   display: none;
 }
+
+@media (max-width: 768px) {
+
+  #game1 {
+    gap: 100px;
+  }
+
+  #guesses {
+    width: 250px;
+    font-size: 0.9rem;
+  }
+
+  #gallows {
+    font-size: 1rem;
+  }
+
+   #game2 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    word-spacing: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  #category {
+    margin-top: 15px;
+  }
+
+  .key {
+    width: 55px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  #start, #restartButton {
+    font-size: 22px;
+    padding: 6px;
+  }
+
+}
+
+@media (max-width: 480px) {
+ 
+  #game1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }  
+
+  #guesses {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+
+  #gallows {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-align: left;
+    white-space: pre-wrap;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  #category {
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+
+  #game2 {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    word-spacing: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .key {
+    width: 55px;
+    height: 45px;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  #start, #restartButton {
+    font-size: 22px;
+    padding: 6px;
+  }
+
+}
