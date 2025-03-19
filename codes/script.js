@@ -1,7 +1,7 @@
 "use strict";
 
 const words = [
-   /* {
+    {
         word: "BEAGLE",
         category: "Pets"
     },
@@ -60,7 +60,7 @@ const words = [
     {
         word: "MEDIEVAL",
         category: "History"
-    }, */
+    },
     {
         word: "STRAWBERRY",
         category: "Plants"
@@ -68,8 +68,8 @@ const words = [
     {
         word: "UNICORN",
         category: "Creatures"
-    }
-    /* {
+    },
+    {
         word: "DRAGON",
         category: "Creatures"
     },
@@ -80,7 +80,7 @@ const words = [
     {
         word: "VOYAGER",
         category: "Spacecraft"
-    },*/
+    }
 ];
 
 const gallowsStages = [

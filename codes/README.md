@@ -1,0 +1,1 @@
+Hello! This is a simple Hangman game I created. I decided to build this because I knew it would require the use of loops, which is a concept I have struggled with and wanted to get some practice using, as well as a chance to get better at creating media queries.
